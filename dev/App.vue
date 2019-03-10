@@ -14,7 +14,7 @@
 <style>
 #preview {
   background: #f6f6f6;
-  border-left: 3px solid gray;
+  border-left: 0.1875rem solid gray;
   padding: 2em;
   margin-left: 1em;
 }

@@ -2,9 +2,20 @@
   <div class="quillWrapper">
     <slot name="toolbar"></slot>
     <div :id="id" ref="quillContainer"></div>
-    <input v-if="useCustomImageHandler" @change="emitImageInfo($event)" ref="fileInput" id="file-upload" type="file" accept="image/*" style="display:none;">
+    <input
+      v-if="useCustomImageHandler"
+      @change="emitImageInfo($event)"
+      ref="fileInput"
+      id="file-upload"
+      type="file"
+      accept="image/*"
+      style="display:none;"
+    >
   </div>
 </template>
+
+<style src="./styles/quill.snow.css"></style>
+<style src="./styles/vue2-editor.scss" lang='scss'></style>
 
 <script>
 import _Quill from "quill";
@@ -34,7 +45,7 @@ export default {
     disabled: {
       type: Boolean
     },
-    editorToolbar: Array,
+    editorToolbar: Array | Object,
     editorOptions: {
       type: Object,
       required: false,
@@ -190,8 +201,3 @@ export default {
   }
 };
 </script>
-
-<style src="quill/dist/quill.snow.css">
-</style>
-<style src="./styles/vue2-editor.scss" lang='scss'>
-</style>

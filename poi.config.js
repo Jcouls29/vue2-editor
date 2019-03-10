@@ -6,12 +6,6 @@ module.exports = {
   vendor: false,
   filename: {
     js: "vue2-editor.js"
-  }
-  // extendWebpack(config) {
-  // 	config.plugin('provide') // <-- give it a name
-  // 		.use(webpack.ProvidePlugin, [{
-  // 			'window.Quill': 'quill/dist/quill.js',
-  // 			'Quill': 'quill/dist/quill.js',
-  // 		}])
-  // }
+  },
+  staticFolder: './src/assets'
 };
